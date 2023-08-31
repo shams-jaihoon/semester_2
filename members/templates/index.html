@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  our products
+{% endblock %}
+
+
+
+{% block content %}
+    <h1>
+        This is index page
+    </h1>
+
+    <ol >
+        {% for x in mymembers %}
+        <li>
+            {{ x.title }}
+            {{ x.content }}
+            {{ x.pub_date }}
+            {{ x.author }}
+        </li>
+    
+        {% endfor %}
+    </ol>
+
+    <a type="button" href="/products">click here to see our products</a>
+
+{% endblock %}

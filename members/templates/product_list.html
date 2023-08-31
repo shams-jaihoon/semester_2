@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  Our products
+
+  <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> -->
+{% endblock %}
+
+
+
+
+{% block content %}
+<h1>Products</h1>
+<p>This is all products list</p>
+
+
+<ol >
+    {% for x in mymembers %}
+    <li>
+        {{ x.name }}
+        {{ x.price }}
+        {{ x.description }}
+    </li>
+
+    {% endfor %}
+</ol>
+
+{% endblock %}
